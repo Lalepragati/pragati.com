@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team - Mahesh.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <!-- Background Video -->
+  <video id="background-video" autoplay loop muted>
+    <source src="https://marketplace.canva.com/EAGXlsX3nHk/1/document_1440w/canva-8fWuHY28aRk.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <ul class="tab-links">
+        <li class="tab"><a href="home.html">Home</a></li>
+        <li class="tab"><a href="team.html">Team</a></li>
+        <li class="tab"><a href="Review.html">Reviews</a></li>
+        <li class="tab"><a href="achievements.html">Achievements</a></li>
+        <li class="tab"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Registration Button -->
+  <div id="registration-button-container">
+    <button class="register-btn" onclick="toggleRegistrationForm()">Register Now</button>
+  </div>
+
+  <!-- Registration Form (Initially Hidden) -->
+  <div id="registration-form-container" class="form-container">
+    <form id="registration-form" action="https://api.web3forms.com/submit" method="POST">
+      <h2>Registration Form</h2>
+      
+      <!-- Student Name -->
+      <div class="form-group">
+        <input type="hidden" name="access_key" value="7ea8e3ff-9393-4f44-8ae1-84a250293c1b">
+        <label for="student-name">Student Name:</label>
+        <input type="text" id="student-name" name="student-name" required>
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="1234567890">
+      </div>
+
+      <!-- Why do you want to join with us? -->
+      <div class="form-group">
+        <label for="reason">Why do you want to join with us?</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+      </div>
+   
+ 
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleRegistrationForm() {
+      var formContainer = document.getElementById('registration-form-container');
+      formContainer.classList.toggle('visible');
+    }
+  </script>
+
+</body>
+</html>

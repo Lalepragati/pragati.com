@@ -1,0 +1,174 @@
+/* Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 10px 0;
+    z-index: 10;
+    text-align: center;
+  }
+  
+  /* Navigation Tabs */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul .tab {
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 15px;
+    background-color: transparent; /* No background color for tabs */
+    color: #fff; /* White text by default */
+    border: 2px solid transparent; /* Initially transparent border */
+    border-radius: 5px; /* Set border radius to 5px */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border 0.3s ease;
+  }
+  
+  /* Remove hyperlink default styling */
+  nav ul .tab a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent (which is white) */
+  }
+  
+  /* Hover Effect for Tabs */
+  nav ul .tab:hover {
+    color: #fff; /* White text on hover */
+     border-radius:5PX;
+    border-image: linear-gradient(to right, rgb(218, 10, 218), cyan) 2; /* Gradient border */
+    transform: scale(1.1); /* Slight scaling on hover */
+  }
+  
+  /* Team Page Styling */
+  .team-member {
+    text-align: center;
+    margin: 20px;
+    background-color: #031010;
+  }
+  
+  .team-member img {
+    border-radius: 50%; /* Makes images round */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff; /* Ensures heading text is also white */
+  }
+  
+
+/* Team Section */
+#team {
+    padding: 120px 20px; /* Padding to ensure space for fixed navbar */
+    background-color: #f4f4f4;
+    text-align: center;
+    background-color: rgb(10, 10, 90);
+}
+
+#team h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #e6e4e4;
+}
+
+/* Team Members */
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid #e0e0e0; /* Default border color */
+   
+
+}
+
+/* Image */
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Round images */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Team Member Details */
+.team-member h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #81079c;
+    margin-bottom: 5px;
+}
+
+.team-member .role {
+    font-size: 1rem;
+    color: #31dbee;
+    margin-bottom: 10px;
+}
+
+.team-member .description {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Hover effect for team member cards */
+.team-member:hover {
+    transform: translateY(-10px); /* Slight lift */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    background-color: #031010; /* Change background color on hover */
+    border-color: #dcdce6; /* Change border color */
+}
+
+.team-member:hover h3 {
+    color: white; /* Change name text color on hover */
+}
+
+.team-member:hover .role, .team-member:hover .description {
+    color: white; /* Change text color for role and description on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .team-container {
+        flex-direction: column
+        align-items: center;
+    }
+
+    .team-member {
+        max-width: 300px;
+    }
+
+    #team h2 {
+        font-size: 2rem;
+    }
+
+    .team-member h3 {
+        font-size: 1.1rem;
+    }
+}

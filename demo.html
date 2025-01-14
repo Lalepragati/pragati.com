@@ -1,0 +1,42 @@
+<form id="registration-form">
+    <label for="student-name">Student Name:</label>
+    <input type="text" id="student-name" name="student-name" required><br><br>
+  
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" required></textarea><br><br>
+  
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+  
+    <label for="reason">Why do you want to join with us?</label>
+    <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
+  
+    <button type="submit">Submit</button>
+    <script>
+        $('#registration-form').on('submit', function(event) {
+  event.preventDefault(); // Prevent normal form submission
+
+  var formData = {
+    'student-name': $('#student-name').val(),
+    'address': $('#address').val(),
+    'phone': $('#phone').val(),
+    'reason': $('#reason').val()
+  };
+
+  // Send data to the Google Apps Script endpoint using AJAX
+  $.ajax({
+    url: 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL', // Replace with your Google Apps Script URL
+    type: 'POST',
+    data: formData,
+    success: function(response) {
+      alert('Registration successful!'); // Display success message
+    },
+    error: function() {
+      alert('Error occurred while submitting your data.');
+    }
+  });
+});
+
+    </script>
+  </form>
+  
